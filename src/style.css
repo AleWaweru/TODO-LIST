@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(204, 204, 204);
+}
+
+h1 {
+  font-size: 15px;
+  color: grey;
+}
+
+.top {
+  display: flex;
+  gap: 25.5rem;
+  align-items: center;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+hr {
+  margin-bottom: 15px;
+}
+
+.fa-arrows-rotate {
+  font-size: 15px;
+  color: rgb(158, 156, 156);
+}
+
+#create {
+  font-size: 8px;
+  color: rgb(158, 156, 156);
+  cursor: pointer;
+}
+
+input {
+  border: none;
+  font-style: italic;
+}
+
+.to-do-add {
+  display: flex;
+  gap: 21rem;
+  margin-left: 10px;
+}
+
+.to-do-clear {
+  border: none;
+  margin-top: 2.6rem;
+  height: 40px;
+  width: 100%;
+  font-style: italic;
+  font-size: 15px;
+  color: rgb(163, 161, 161);
+  cursor: pointer;
+}
+
+.container {
+  background-color: #fdfafa;
+  width: 550px;
+  margin-left: 20%;
+  margin-top: 10%;
+
+  /* align-items: center; */
+  justify-content: center;
+  border: 1px solid #fff;
+  height: 295px;
+  border-radius: 6px;
+  box-shadow: 2px 2px 2px 4px rgb(138, 137, 137);
+}
+
+.to-do-list li {
+  list-style: none;
+  display: flex;
+  margin-top: 2px;
+  font-size: 20px;
+}
+
+/* .open-dot {
+  margin-left: 22rem;
+  align-items: center;
+  margin-top: 15px;
+  font-size: 15px;
+  color: rgb(158, 156, 156);
+} */
+
+.to-do-list-item li {
+  align-items: center;
+  margin-top: 5px;
+}
+
+.option-btn {
+  margin-left: 31rem;
+  background: none;
+  border: none;
+  color: rgb(97, 95, 95);
+  padding-top: -50px;
+  font-size: 15px;
+}
+
+.input-item {
+  margin-bottom: -37px;
+  margin-left: 20px;
+}
+
+.to-do-list {
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  justify-content: center;
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    width: 100%;
+  }
+
+  .container {
+    width: 40%;
+    margin-left: -10px;
+    margin-right: 20rem;
+    margin-top: 10%;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fff;
+    height: 200px;
+  }
+}
