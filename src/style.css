@@ -1,0 +1,91 @@
+body {
+  background-color: rgb(204, 204, 204);
+}
+
+h1 {
+  font-size: 15px;
+  color: grey;
+}
+
+.top {
+  display: flex;
+  gap: 20rem;
+  align-items: center;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.fa-arrows-rotate {
+  font-size: 15px;
+  color: rgb(158, 156, 156);
+}
+
+#create {
+  font-size: 8px;
+  color: rgb(158, 156, 156);
+  cursor: pointer;
+}
+
+input {
+  border: none;
+  font-style: italic;
+}
+
+.to-do-add {
+  display: flex;
+  gap: 15rem;
+  margin-left: 10px;
+}
+
+.to-do-clear {
+  border: none;
+  margin-top: 2rem;
+  height: 40px;
+  width: 100%;
+  font-style: italic;
+  font-size: 15px;
+  color: rgb(163, 161, 161);
+  cursor: pointer;
+}
+
+.container {
+  background-color: #fdfafa;
+  width: 35%;
+  margin-left: 30%;
+  margin-top: 10%;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #fff;
+  height: 250px;
+  border-radius: 6px;
+  box-shadow: 2px 2px 2px 4px rgb(138, 137, 137);
+}
+
+.to-do-list li {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+.open-dot {
+  margin-left: 17rem;
+  align-items: center;
+  margin-top: 15px;
+  font-size: 15px;
+  color: rgb(158, 156, 156);
+}
+
+.checked {
+  text-decoration: line-through;
+}
+
+.option-btn {
+  margin-left: 18rem;
+  background: none;
+  border: none;
+  color: rgb(97, 95, 95);
+}
+
+.input-item {
+  margin-left: 20px;
+}
