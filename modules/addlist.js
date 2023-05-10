@@ -11,7 +11,7 @@ export default class ContentList {
       const listItem = document.createElement('div');
       listItem.className = 'to-do-list-item';
       listItem.innerHTML = `<li>
-  <input type="checkbox" class ="input-item" id="${task.index}" name="${task.description}" value="${task.description}"> ${task.description}
+   <input type="checkbox" class ="to-do-list" id="${task.index}" name="${task.description}" value="${task.description}"> ${task.description}
   </li>
   `;
       const optionBtn = document.createElement('button');

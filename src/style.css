@@ -20,6 +20,10 @@ h1 {
   margin-bottom: 10px;
 }
 
+hr {
+  margin-bottom: 15px;
+}
+
 .fa-arrows-rotate {
   font-size: 15px;
   color: rgb(158, 156, 156);
@@ -44,7 +48,7 @@ input {
 
 .to-do-clear {
   border: none;
-  margin-top: 2.9rem;
+  margin-top: 2.6rem;
   height: 40px;
   width: 100%;
   font-style: italic;
@@ -58,10 +62,11 @@ input {
   width: 550px;
   margin-left: 20%;
   margin-top: 10%;
-  align-items: center;
+
+  /* align-items: center; */
   justify-content: center;
   border: 1px solid #fff;
-  height: 255px;
+  height: 295px;
   border-radius: 6px;
   box-shadow: 2px 2px 2px 4px rgb(138, 137, 137);
 }
@@ -69,34 +74,42 @@ input {
 .to-do-list li {
   list-style: none;
   display: flex;
-  gap: 10px;
+  margin-top: 2px;
+  font-size: 20px;
 }
 
-.open-dot {
+/* .open-dot {
   margin-left: 22rem;
   align-items: center;
   margin-top: 15px;
   font-size: 15px;
   color: rgb(158, 156, 156);
-}
+} */
 
-.checked {
-  text-decoration: line-through;
+.to-do-list-item li {
+  align-items: center;
+  margin-top: 5px;
 }
 
 .option-btn {
-  margin-left: 32rem;
+  margin-left: 31rem;
   background: none;
   border: none;
   color: rgb(97, 95, 95);
+  padding-top: -50px;
+  font-size: 15px;
 }
 
 .input-item {
+  margin-bottom: -37px;
   margin-left: 20px;
 }
 
 .to-do-list {
   margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  justify-content: center;
 }
 
 @media screen and (max-width: 375px) {
