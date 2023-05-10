@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: rgb(204, 204, 204);
 }
@@ -9,7 +14,7 @@ h1 {
 
 .top {
   display: flex;
-  gap: 20rem;
+  gap: 25.5rem;
   align-items: center;
   margin-left: 10px;
   margin-bottom: 10px;
@@ -33,13 +38,13 @@ input {
 
 .to-do-add {
   display: flex;
-  gap: 15rem;
+  gap: 21rem;
   margin-left: 10px;
 }
 
 .to-do-clear {
   border: none;
-  margin-top: 2rem;
+  margin-top: 2.9rem;
   height: 40px;
   width: 100%;
   font-style: italic;
@@ -50,13 +55,13 @@ input {
 
 .container {
   background-color: #fdfafa;
-  width: 35%;
-  margin-left: 30%;
+  width: 550px;
+  margin-left: 20%;
   margin-top: 10%;
   align-items: center;
   justify-content: center;
   border: 1px solid #fff;
-  height: 250px;
+  height: 255px;
   border-radius: 6px;
   box-shadow: 2px 2px 2px 4px rgb(138, 137, 137);
 }
@@ -68,7 +73,7 @@ input {
 }
 
 .open-dot {
-  margin-left: 17rem;
+  margin-left: 22rem;
   align-items: center;
   margin-top: 15px;
   font-size: 15px;
@@ -80,7 +85,7 @@ input {
 }
 
 .option-btn {
-  margin-left: 18rem;
+  margin-left: 32rem;
   background: none;
   border: none;
   color: rgb(97, 95, 95);
@@ -88,4 +93,25 @@ input {
 
 .input-item {
   margin-left: 20px;
+}
+
+.to-do-list {
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    width: 100%;
+  }
+
+  .container {
+    width: 40%;
+    margin-left: -10px;
+    margin-right: 20rem;
+    margin-top: 10%;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fff;
+    height: 200px;
+  }
 }
