@@ -1,130 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;1,200;1,300;1,700;1,900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
-}
-
-body {
-  background-color: rgb(204, 204, 204);
-}
-
-h1 {
-  font-size: 15px;
-  color: grey;
-}
-
-.top {
-  display: flex;
-  gap: 25.5rem;
-  align-items: center;
-  margin-left: 10px;
-  margin-bottom: 10px;
-}
-
-hr {
-  margin-bottom: 15px;
-}
-
-.fa-arrows-rotate {
-  font-size: 15px;
-  color: rgb(158, 156, 156);
-}
-
-#create {
-  font-size: 8px;
-  color: rgb(158, 156, 156);
-  cursor: pointer;
-}
-
-input {
-  border: none;
-  font-style: italic;
-}
-
-.to-do-add {
-  display: flex;
-  gap: 21rem;
-  margin-left: 10px;
-}
-
-.to-do-clear {
-  border: none;
-  margin-top: 2.6rem;
-  height: 40px;
-  width: 100%;
-  font-style: italic;
-  font-size: 15px;
-  color: rgb(163, 161, 161);
-  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
 }
 
 .container {
-  background-color: #fdfafa;
-  width: 550px;
-  margin-left: 20%;
-  margin-top: 10%;
-
-  /* align-items: center; */
-  justify-content: center;
-  border: 1px solid #fff;
-  height: 295px;
-  border-radius: 6px;
-  box-shadow: 2px 2px 2px 4px rgb(138, 137, 137);
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #929394, #fdfdfd);
+  padding: 10px;
 }
 
-.to-do-list li {
-  list-style: none;
+.todo-app {
+  width: 100%;
+  max-width: 540px;
+  background: #fff;
+  margin: 100px auto 20px;
+  padding: 1px 1px 65px;
+  border-radius: 10px;
+  box-shadow: 5px 15px 15px #888;
+}
+
+.row {
   display: flex;
-  margin-top: 2px;
-  font-size: 20px;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+
+  /* border-radius: 30px; */
+  padding-left: 20px;
+  min-height: 20px;
+  border-bottom: 1px solid gray;
 }
 
-/* .open-dot {
-  margin-left: 22rem;
-  align-items: center;
-  margin-top: 15px;
-  font-size: 15px;
-  color: rgb(158, 156, 156);
-} */
-
-.to-do-list-item li {
-  align-items: center;
-  margin-top: 5px;
-}
-
-.option-btn {
-  margin-left: 31rem;
-  background: none;
+input {
+  flex: 1;
   border: none;
-  color: rgb(97, 95, 95);
-  padding-top: -50px;
-  font-size: 15px;
+  outline: none;
+  background: transparent;
+  font-style: italic;
 }
 
-.input-item {
-  margin-bottom: -37px;
-  margin-left: 20px;
-}
-
-.to-do-list {
-  margin-top: 10px;
+button {
+  border: none;
+  outline: none;
+  padding: 10px 10px;
   margin-right: 10px;
-  margin-left: 10px;
-  justify-content: center;
+  color: #7e7b7b;
+  border-radius: 26px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
-@media screen and (max-width: 375px) {
-  body {
-    width: 100%;
-  }
+ul {
+  margin-top: 20px;
+  align-items: center;
+}
 
-  .container {
-    width: 40%;
-    margin-left: -10px;
-    margin-right: 20rem;
-    margin-top: 10%;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #fff;
-    height: 200px;
-  }
+ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  border-bottom: 1px solid grey;
+  align-items: center;
+}
+
+ul li::before {
+  content: '';
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 18px;
+  left: 8px;
+}
+
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  background-image: url(images/checked.png);
+}
+
+#close-btn {
+  width: 100%;
+  background-color: #555;
+  margin-top: 20px;
+  margin-bottom: -60px;
+  border-radius: 15px;
+}
+
+#close-btn button {
+  width: 100%;
+  border-radius: 1px;
+  background-color: #ebe8e8;
+  font-style: italic;
+  font-size: 20px;
+  height: 50px;
+}
+
+.list-contact {
+  display: flex;
+  font-size: 15px;
+  gap: 10px;
+}
+
+#list-container li span {
+  /* background-image: url(images/recycle-bin.png); */
+  color: #888;
+  margin-left: 28rem;
+  font-size: 29px;
+  width: 20px;
+  border-radius: 50%;
+  display: flex;
+  margin-top: -2rem;
+  position: absolute;
+}
+
+#list-container li span:hover {
+  cursor: pointer;
+}
+
+.rotate-icon {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 5px;
+  align-items: center;
+}
+
+.rotate-icon h2 {
+  font-size: 15px;
+  margin-left: 15px;
+  color: #888;
+}
+
+hr {
+  /* margin-bottom: 10px; */
+  margin-top: 15px;
+}
+
+.fa-arrows-rotate {
+  margin-right: 20px;
+  color: #a8a6a6;
+}
+
+.closeListBtn {
+  display: none;
 }

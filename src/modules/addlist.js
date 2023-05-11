@@ -1,24 +1,62 @@
-import tasksToDo from './Array.js';
+import clearCheckedItems from './delete.js';
 
-export default class ContentList {
-  static displayToDoList = () => {
-    const toDoListContainer = document.querySelector(
-      '.to-do-list',
-    );
-    // sort the tasksToDo array by index
-    tasksToDo.sort((a, b) => a.index - b.index);
-    tasksToDo.forEach((task) => {
-      const listItem = document.createElement('div');
-      listItem.className = 'to-do-list-item';
-      listItem.innerHTML = `<li>
-   <input type="checkbox" class ="to-do-list" id="${task.index}" name="${task.description}" value="${task.description}"> ${task.description}
-  </li>
-  `;
-      const optionBtn = document.createElement('button');
-      optionBtn.className = 'option-btn';
-      optionBtn.innerHTML = '<i class="fa fa-ellipsis-v" aria-hidden="true"></i>';
-      listItem.appendChild(optionBtn);
-      toDoListContainer.appendChild(listItem);
-    });
-  };
+const listItems = document.getElementById('list-container');
+
+const InputBox = document.getElementById('input-box');
+
+const clearBtn = document.getElementById('close-btn');
+
+const addTask = document.getElementById('addTask');
+
+const saveData = () => {
+  localStorage.setItem('data', listItems.innerHTML);
+};
+
+function addTask1() {
+  if (InputBox.value === '') {
+    alert('You must write something');
+  } else {
+    const li = document.createElement('li');
+    li.draggable = true;
+    li.innerHTML = InputBox.value;
+    listItems.appendChild(li);
+
+    const span = document.createElement('span');
+    span.innerHTML = '\'<img src="images/trash-can.png" alt="trash">\'';
+    span.innerHTML = '\u00d7';
+    li.appendChild(span);
+  }
+
+  InputBox.value = '';
+  saveData();
 }
+
+addTask.addEventListener('click', addTask1);
+
+listItems.addEventListener('click', (e) => {
+  if (e.target.tagName === 'LI') {
+    e.target.classList.toggle('checked');
+    saveData();
+  } else if (e.target.tagName === 'SPAN') {
+    e.target.parentElement.remove();
+    saveData();
+  }
+}, false);
+
+const showTask = () => {
+  listItems.innerHTML = localStorage.getItem('data');
+};
+showTask();
+
+function clearAll(e) {
+  if (e.target.tagName === 'LI') {
+    e.target.parentElement.remove('checked');
+    saveData();
+  }
+}
+
+clearBtn.addEventListener('click', clearAll);
+
+clearBtn.addEventListener('click', () => {
+  clearCheckedItems();
+});
