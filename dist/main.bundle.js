@@ -155,7 +155,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _del
   \*******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ clearCheckedItems)\n/* harmony export */ });\nconst listItems = document.getElementById('list-container');\nconst saveData = () => {\n  localStorage.setItem('data', listItems.innerHTML);\n};\n\nfunction clearCheckedItems() {\n  const listItems = document.getElementById('list-container').children;\n\n  for (let i = 0; i < listItems.length; i += 1) {\n    if (listItems[i].classList.contains('checked')) {\n      listItems[i].remove();\n      i -= 1;\n    }\n  }\n\n  saveData();\n}\n\n//# sourceURL=webpack://todo-list/./src/modules/delete.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ clearCheckedItems)\n/* harmony export */ });\nconst listItems = document.getElementById('list-container');\nconst saveData = () => {\n  localStorage.setItem('data', listItems.innerHTML);\n};\n\nfunction clearCheckedItems() {\n  const listContainer = document.getElementById('list-container');\n  const listItems = Array.from(listContainer.children);\n  const uncheckedItems = listItems.filter((item) => !item.classList.contains('checked'));\n\n  listContainer.innerHTML = '';\n  uncheckedItems.forEach((item) => listContainer.appendChild(item));\n\n  saveData();\n}\n\n\n//# sourceURL=webpack://todo-list/./src/modules/delete.js?");
 
 /***/ }),
 

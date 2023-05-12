@@ -4,14 +4,12 @@ const saveData = () => {
 };
 
 export default function clearCheckedItems() {
-  const listItems = document.getElementById('list-container').children;
+  const listContainer = document.getElementById('list-container');
+  const listItems = Array.from(listContainer.children);
+  const uncheckedItems = listItems.filter((item) => !item.classList.contains('checked'));
 
-  for (let i = 0; i < listItems.length; i += 1) {
-    if (listItems[i].classList.contains('checked')) {
-      listItems[i].remove();
-      i -= 1;
-    }
-  }
+  listContainer.innerHTML = '';
+  uncheckedItems.forEach((item) => listContainer.appendChild(item));
 
   saveData();
 }
