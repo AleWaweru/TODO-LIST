@@ -7,10 +7,17 @@ const InputBox = document.getElementById('input-box');
 const clearBtn = document.getElementById('close-btn');
 const addTask = document.getElementById('addTask');
 
+let counter = 0;
+
+function screenData() {
+  localStorage.setItem('data', listItems.innerHTML);
+}
+
 function addTask1() {
   if (InputBox.value === '') {
     alert('input cannot be blank');
   } else {
+    counter += 1;
     const li = document.createElement('li');
     li.innerHTML = InputBox.value;
 
@@ -37,6 +44,7 @@ function addTask1() {
     listItems.appendChild(li);
 
     const task = {
+      index: counter,
       description: InputBox.value,
       completed: false,
     };
@@ -47,6 +55,7 @@ function addTask1() {
   }
 
   InputBox.value = '';
+  screenData();
 }
 
 addTask.addEventListener('click', addTask1);
@@ -64,9 +73,9 @@ listItems.addEventListener(
   false,
 );
 
-const showTask = () => {
-  InputBox.innerHTML = localStorage.getItem('data');
-};
+function showTask() {
+  listItems.innerHTML = localStorage.getItem('data');
+}
 showTask();
 
 function clearAll(e) {
