@@ -158,3 +158,9 @@ hr {
 .closeListBtn {
   display: none;
 }
+
+.fa-edit {
+  margin-left: 28rem;
+  margin-bottom: 80px;
+  color: #a8a6a6;
+}
