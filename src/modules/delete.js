@@ -4,14 +4,23 @@ const saveData = () => {
 };
 
 export default function clearCheckedItems() {
-  const listItems = document.getElementById('list-container').children;
+  const listContainer = document.getElementById('list-container');
+  const listItems = Array.from(listContainer.children);
+  const uncheckedItems = listItems.filter((item) => !item.classList.contains('checked'));
 
-  for (let i = 0; i < listItems.length; i += 1) {
-    if (listItems[i].classList.contains('checked')) {
-      listItems[i].remove();
-      i -= 1;
-    }
-  }
+  listContainer.innerHTML = '';
+  uncheckedItems.forEach((item) => listContainer.appendChild(item));
+
+  const updatedTasksArray = uncheckedItems.map((item, index) => {
+    const task = {
+      description: item.textContent,
+      index: index + 1,
+      completed: item.classList.contains('checked'),
+    };
+    return task;
+  }).filter((task) => !task.completed);
+
+  localStorage.setItem('tasks', JSON.stringify(updatedTasksArray));
 
   saveData();
 }
