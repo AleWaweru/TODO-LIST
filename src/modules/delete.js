@@ -18,13 +18,9 @@ export default function clearCheckedItems() {
       completed: item.classList.contains('checked'),
     };
     return task;
-  }).filter(task => !task.completed);
+  }).filter((task) => !task.completed);
 
   localStorage.setItem('tasks', JSON.stringify(updatedTasksArray));
 
-
   saveData();
 }
-
-
-  
