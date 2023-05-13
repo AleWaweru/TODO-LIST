@@ -1,3 +1,4 @@
+
 // local storage
 export default function saveData() {
   // Create an array of task objects from the list items
@@ -16,3 +17,7 @@ export default function saveData() {
   // Convert the tasks array to a JSON string and store it in local storage
   localStorage.setItem('tasks', JSON.stringify(tasksArray));
 }
+
+
+
+
