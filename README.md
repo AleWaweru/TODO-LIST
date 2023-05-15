@@ -92,7 +92,7 @@ Clone this repository to your desired folder:
 Example commands:
 
 ```sh
-  cd Awesome-books
+  cd todo-list
   git git@github.com:AleWaweru/TODO-LIST.git
 
 ```
