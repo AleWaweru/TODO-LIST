@@ -38,7 +38,6 @@
 </details>
 
 
-
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
@@ -153,7 +152,6 @@ not required
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
-
 
 
 👤 **Author1**
