@@ -33,7 +33,7 @@
   <ul>
     <li>HTML</li>
     <li>CSS</li>
-<li>JavaScript</li>
+    <li>JavaScript</li>
   </ul>
 </details>
 
@@ -48,6 +48,7 @@
 - **Add your list section**
 - **task section**
 - **clear button section**
+- **unit testing**
 
 
 
@@ -160,6 +161,12 @@ not required
 - GitHub: [@githubhandle](https://github.com/AleWaweru/My-Portfolio)
 - Twitter: [@twitterhandle](https://twitter.com/ngashalex)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/alex-waweru-2b2701180/)
+
+👤 **Author2**
+
+- GitHub: [@githubhandle](https://github.com/wolterbwambale)
+- Twitter: [@twitterhandle](https://twitter.com/BwambaleWolter)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/bwambale-benny-wolter-a9284925a/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
